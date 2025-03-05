@@ -32,3 +32,5 @@ python manage.py shell
 from book.models import Book
 b = Book(title="Django for Beginners", author="William S. Vincent", price=25.99, stock=10)
 b.save()
+
+1
