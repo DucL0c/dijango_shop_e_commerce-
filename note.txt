@@ -1,0 +1,34 @@
+// CONNECT DB
+python manage.py makemigrations
+python manage.py migrate --database=default
+python manage.py runserver
+
+//CREATE PROJECT & APP 
+django-admin startproject tdloc_project1     (new project)
+django-admin startapp book                   (new service)
+
+
+
+//Framework
+pip install django djangorestframework (REST Framework)
+
+
+//AMIN PASSWORD
+python manage.py createsuperuser
+
+
+//Kiểm tra collection trong db
+python manage.py shell
+
+from pymongo import MongoClient
+client = MongoClient("mongodb+srv://user:123@django.nvmrk.mongodb.net/?retryWrites=true&w=majority&appName=Django")
+db = client["shop_e_commerce"]
+print(db.list_collection_names()) 
+
+
+
+//mongo 
+python manage.py shell
+from book.models import Book
+b = Book(title="Django for Beginners", author="William S. Vincent", price=25.99, stock=10)
+b.save()
